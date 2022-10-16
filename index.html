@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+
+    <div id="script" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+       <div id="chrome" onclick="maximalise()" ondblclick="chrome()" draggable="true" ondragstart="drag(event)">
+            <img src="images/chrome.png">
+            Chrome
+       </div>
+
+       <div id="bin" draggable="false" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images/bin.png">
+        Kosz
+       </div>
+
+       <div id="dragge" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+       </div>
+
+        <div id="function-bar">
+
+            <div class="close-card" onclick="closed()">
+                <img src="images/close.png" width="12px" height="12px" draggable="false">
+            </div>
+
+            <div class="restore-card">
+                <img src="images/restore.png" width="14px" height="14px" draggable="false">
+            </div>
+
+            <div class="minimalise-card" onclick="minimalise()">
+                <img src="images/minimalise.png" width="16px" height="10px" draggable="false">
+            </div>
+
+        </div>
+
+        <iframe src="http://funkcje.net" id="iframe-one">
+
+        </iframe>
+
+        <div id="toolbar" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        <!-- Left toolbar section -->
+
+            <div class="windows">
+                <img src="images/windows.png" draggable="false" width="21px" height="21px">
+            </div>
+
+            <div class="search" onclick="search()">
+                <img src="images/search.png" draggable="false" width="19px" height="19px">
+            </div>
+
+            <div id="searcher">
+
+                <div id="search-bar" draggable="false" onclick="chrome(), exit()">
+
+                    <img src="images/chrome.png">
+                    Google Chrome
+
+                </div>
+
+                <hr>
+
+            </div>
+
+        <!-- Mid toolbar section -->
+
+            <div id="chrome-icon" onclick="minimalise()" ondblclick="maximalise()">
+
+            </div>
+
+        <!-- Right toolbar section -->
+
+            <div id="system-date">
+
+                <div id="clock" draggable="false">
+                
+                </div>
+
+                <div id="date" draggable="false">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="samsung">
+            SAMSUNG
+        </div>
+
+    </div>
+
+    <div class="click"> 
+        >Click<
+    </div>
+
+</body>
+
+    <script src="main.js"></script>
+    <script src="scripts.js"></script>
+
+</html>
