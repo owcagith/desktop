@@ -1,3 +1,9 @@
+//F5 ask
+
+// function F5ask() {
+//   return "Wychodzisz?"
+// }
+
 // Clock script
 
   function clock() {

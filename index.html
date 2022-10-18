@@ -8,9 +8,44 @@
         <link rel="shortcut icon" href="images/favicon.ico">
     </head>
 
-<body>
+<body onbeforeunload="return F5ask()">
+
+<div id="prescreen">
+
+    <div class="loader"></div>
+
+</div>
+ 
+<div id="screen">
+
+</div> 
+
 
     <div id="script" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        <button id="start" onclick="start()">
+
+        <div id="start-fill">
+        
+            <div class="start-background">
+        
+            </div>
+        
+            <div class="start-switcher">
+                
+                <div id="switcher">
+        
+                    <div id="dot">
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+            
+        </button>   
         
        <div id="chrome" onclick="maximalise()" ondblclick="chrome()" draggable="true" ondragstart="drag(event)">
             <img src="images/chrome.png">
@@ -32,7 +67,7 @@
                 <img src="images/close.png" width="12px" height="12px" draggable="false">
             </div>
 
-            <div class="restore-card">
+            <div class="restore-card" onclick="restore()">
                 <img src="images/restore.png" width="14px" height="14px" draggable="false">
             </div>
 
@@ -50,8 +85,16 @@
 
         <!-- Left toolbar section -->
 
-            <div class="windows">
+            <div class="windows" onclick="win_menu()">
                 <img src="images/windows.png" draggable="false" width="21px" height="21px">
+            </div>
+
+            <div id="windows-menu">
+
+                <div class="off" onclick="off()">
+
+                </div>
+
             </div>
 
             <div class="search" onclick="search()">
@@ -60,7 +103,7 @@
 
             <div id="searcher">
 
-                <div id="search-bar" draggable="false" onclick="chrome(), exit()">
+                <div id="search-bar" draggable="false" onclick="chrome(), exit(), maximalise()">
 
                     <img src="images/chrome.png">
                     Google Chrome
@@ -97,15 +140,15 @@
             SAMSUNG
         </div>
 
-    </div>
+        <div id="monitorclick" onclick="screen()">
 
-    <div class="click"> 
-        >Click<
+        </div>
+
     </div>
 
 </body>
 
     <script src="main.js"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 
 </html>
