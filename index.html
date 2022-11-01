@@ -6,10 +6,13 @@
         <title>Desktop</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="images/favicon.ico">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     </head>
 
 <body onbeforeunload="return F5ask()">
-
+<!-- 
 <div id="prescreen">
 
     <div class="loader"></div>
@@ -18,8 +21,7 @@
  
 <div id="screen">
 
-</div> 
-
+</div> -->
 
     <div id="script" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
 
@@ -77,7 +79,7 @@
 
         </div>
 
-        <iframe src="http://funkcje.net" id="iframe-one">
+        <iframe src="https://owcagith.github.io/" id="iframe-one">
 
         </iframe>
 
@@ -91,14 +93,32 @@
 
             <div id="windows-menu">
 
-                <div class="off" onclick="off()">
+                <div class="tile settings-1">
+
+                </div>
+
+                <div class="tile off" onclick="answer()">
+
+                </div>
+
+                <div id="answer">
+
+                    <p>Wanna switch off?</p>
+
+                    <div class="ans" onclick="off()">
+                        YES
+                    </div>
+
+                    <div class="ans" onclick="not()">
+                        NO
+                    </div>
 
                 </div>
 
             </div>
 
             <div class="search" onclick="search()">
-                <img src="images/search.png" draggable="false" width="19px" height="19px">
+                <img src="images/search.png" draggable="false" width="20px" height="20px">
             </div>
 
             <div id="searcher">
@@ -114,9 +134,17 @@
 
             </div>
 
+        <!-- Settings toolbar icon -->
+
+            <div class="settings" ondblclick="start_settings(), maximalise_settings()" onclick="minimalise_settings()">
+
+                <img src="images/settings.png" width="24px" height="24px">
+
+            </div>
+
         <!-- Mid toolbar section -->
 
-            <div id="chrome-icon" onclick="minimalise()" ondblclick="maximalise()">
+            <div id="chrome-icon" class="toolbar-icon" onclick="minimalise()" ondblclick="maximalise()">
 
             </div>
 
@@ -136,9 +164,85 @@
 
         </div>
 
+    <!--Settings -->
+
+        <div id="function-bar-settings">
+
+            <div id="l">
+
+            </div>
+
+            <div class="minimalise-card" onclick="minimalise_settings()">
+                <img src="images/minimalise.png" width="16px" height="10px" draggable="false">
+            </div>
+
+            <div class="close-card" onclick="closed_settings()">
+                <img src="images/close.png" width="12px" height="12px" draggable="false">
+            </div>
+
+        </div>
+
+        <div id="settings">
+
+            <div id="left-col">
+
+                <div class="settings-tile" onclick="backgroundchange()">
+                    Tło pulpitu
+                </div>
+
+                <div class="settings-tile" onclick="colorchange()">
+                    Kolory systemu
+                </div>
+
+                <div class="settings-tile" onclick="appchange()">
+                    Aplikacje
+                </div>
+
+            </div>
+
+            <div id="main-col">
+
+                <div id="background-section">
+
+                    <div id="bgsection">
+
+                        <div id="bg-border">
+
+                            <div id="background-1" onclick="background_change()">
+
+                            </div>
+
+                            <h3></h3>
+
+                        </div>
+
+                    </div>
+
+                    <input type="file" id="background-input">
+    
+                </div>
+
+                <div id="color-section">
+               
+                </div>
+
+                <div id="apps-section">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+      
+
+    <!--Samsung logo -->
+
         <div id="samsung">
             SAMSUNG
         </div>
+
+    <!-- Screen switcher -->    
 
         <div id="monitorclick" onclick="screen()">
 
